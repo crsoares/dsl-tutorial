@@ -60,6 +60,9 @@ return array(
         'aliases' => array(
             'translator' => 'MvcTranslator',
         ),
+        'factories' => array(
+            'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
+        ),
     ),
     'translator' => array(
         'locale' => 'en_US',
@@ -96,6 +99,19 @@ return array(
     'console' => array(
         'router' => array(
             'routes' => array(
+            ),
+        ),
+    ),
+
+    'navigation' => array(
+        'default' => array(
+            array(
+                'label' => 'Home',
+                'route' => 'home',
+            ),
+            'Crud' => array(
+                'label' => 'Cadastro',
+                'uri' => '#',
             ),
         ),
     ),

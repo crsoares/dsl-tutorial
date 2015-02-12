@@ -16,7 +16,7 @@ return array(
                     'host' => 'localhost',
                     'port' => '3306',
                     'user' => 'root',
-                    'dbname' => 'tutorial',
+                    'dbname' => 'skeletonapplication',
                     'charset' => 'UTF8',
                     'driverOptions' => array(
                         'charset' => 'UTF8'

@@ -5,7 +5,8 @@ return [
         'guest_role' => 'visitante',
         'guards' => [
             'ZfcRbac\Guard\RouteGuard' => [
-                'home' => ['usuario'],
+                'dashboard' => ['usuario'],
+                'cliente/*' => ['admin'],
                 'usuario/*' => ['admin'],
             ],
             'ZfcRbac\Guard\ControllerGuard' => [
@@ -15,7 +16,6 @@ return [
                 ],
             ]
         ],
- 
         // 'protection_policy' => \ZfcRbac\Guard\GuardInterface::POLICY_ALLOW,
         'role_provider' => [
             'ZfcRbac\Role\InMemoryRoleProvider' => [
@@ -30,11 +30,9 @@ return [
                 'visitante'
             ]
         ],
- 
         'unauthorized_strategy' => [
             'template' => 'error/403'
         ],
- 
         'redirect_strategy' => [
             'redirect_when_connected' => true,
             'redirect_to_route_connected' => 'error/403',
